@@ -1,0 +1,163 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Fullscreen background image */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('background_photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Ensure your content appears above the background */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  background-color: #f800ae;
+  color: white;
+  padding: 1rem;
+  top: 0;
+  position: sticky;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #f800ae;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  padding-left: 2rem;
+  border-top: 1px solid #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.hero {
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #ffffff00;
+}
+
+.phone {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+section {
+  font-size: 1rem;
+  display: none;
+  padding: 1rem;
+  background-color: #ffffffb3;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-justify: inter-word;
+  line-height: 1.6; 
+}
+
+section.active {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0 auto;
+  width: fit-content; 
+  text-align: center;
+}
+
+ul li {
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.price-table {
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.price-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.price-table td:first-child {
+  text-align: left;
+}
+
+.price-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.price-title {
+  margin-top: 50px;
+}
+
+.whatsapp {
+  display: inline-block;
+  background-color: #f800ae;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
